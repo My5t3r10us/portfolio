@@ -1,0 +1,50 @@
+.flou {
+    background-color: rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(2px);
+}
+
+body {
+    background-color: #1f1f1f !important;
+}
+
+/* Début hover navbar */
+li{display:inline-block;min-width:50px;}
+li a {
+    text-decoration:none;
+    line-height: 70px;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 1.3em;
+    color: #444444;
+    text-transform: uppercase;
+}
+li a:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0;
+  border-radius: 20px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+li a:hover:after {
+  width: 90%;
+  background: #ffffff;
+}
+
+/* fin hover navbar */
+
+a {
+    font-family: 'Georama', sans-serif;
+    font-size: larger !important;
+    color: white !important;
+}
+
+.liens-nav {
+    margin-left: auto;
+}
+
+.police-titre {
+    font-family: 'Permanent Marker', cursive;
+}
