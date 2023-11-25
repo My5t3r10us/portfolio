@@ -3,24 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Baptiste MOINE</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Georama:wght@500&family=Permanent+Marker&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
-
+    <title>Mini OS</title>
 </head>
 <body>
-    <div class="container">
-        <div class="blocHorizontal">
-            <div class="slide one">Slide 1</div>
-            <div class="slide two">Slide 2</div>
-            <div class="slide three">Slide 3</div>
-            <div class="slide four">Slide 4</div>
+
+
+    <div class="taskbar">
+        <button class="icon" onclick="openWindow('window1')">App 1</button>
+        <button class="icon" onclick="openWindow('window2')">App 2</button>
+        <!-- Ajoute d'autres icônes selon les besoins -->
+    </div>
+
+    <div class="window" id="window1">
+        <div class="title-bar" onmousedown="startDragging(event, 'window1')">
+            <span class="title">Fenêtre 1</span>
+            <button id="btn-resize" class="close-btn" onclick="closeWindow('window1')">X</button>
+            <button id="btn-resize" class="maximize-btn" onclick="maximizeWindow('window1')">+</button>
+            <button id="btn-resize" class="minimize-btn" onclick="minimizeWindow('window1')">-</button>
+        </div>
+        <div class="content">
+            <h1>test</h1>
         </div>
     </div>
 
+    <div class="window" id="window2">
+        <div class="title-bar" onmousedown="startDragging(event, 'window2')">
+            <span class="title">Fenêtre 2</span>
+            <button id="btn-resize" class="close-btn" onclick="closeWindow('window2')">X</button>
+            <button id="btn-resize" class="maximize-btn" onclick="maximizeWindow('window2')">+</button>
+            <button id="btn-resize" class="minimize-btn" onclick="minimizeWindow('window2')">-</button>
+        </div>
+        <div class="content">
+            <h1>test</h1>
+        </div>
+    </div>
+
+    <!-- Ajoute d'autres fenêtres selon les besoins -->
 
     <script src="script.js"></script>
 </body>
