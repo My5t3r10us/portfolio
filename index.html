@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mini OS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="pageConnexion">
+        <img src="Assets/fondEcran/connexion/MacOS_Monterey_2021_Purple_Abstract_5K_Background_1366x768.jpg">
+        <div id="iconUtilisateur">
+            <div class="col-img">
+                <img src="Assets/photoProfil/1685793981541.jpeg" alt="">
+            </div>
+
+            <div class="col-mdp">
+                <h2>Baptiste MOINE</h2>
+                <div class="mdp">
+                    <input type="password" id="password" placeholder="Mot de passe">
+                    <div id="loader" class="lds-default">
+                        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="taskbar">
+        <button class="icon" onclick="openWindow('profil')">
+            <span class="material-symbols-outlined">
+                person
+            </span>
+        </button>
+
+        <button class="icon" onclick="openWindow('experience')">
+            <span class="material-symbols-outlined">
+                work
+            </span>
+        </button>
+
+        <button class="icon" onclick="openWindow('contact')">
+            <span class="material-symbols-outlined">
+                mail
+            </span>
+        </button>
+
+        <!-- Ajoute d'autres icônes selon les besoins -->
+    </div>
+
+    
+
+    <div class="window" id="popUp">
+        <div class="title-bar" onmousedown="startDragging(event, 'popUp')">
+            <span class="title">Me découvrir</span>
+            <button id="btn-resize" class="close-btn" onclick="closeWindow('popUp')">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </button>
+            <button id="btn-resize" class="maximize-btn" onclick="maximizeWindow('popUp')">
+                <span class="material-symbols-outlined">
+                    check_box_outline_blank
+                </span>
+            </button>
+            <button id="btn-resize" class="minimize-btn" onclick="minimizeWindow('popUp')">
+                <span class="material-symbols-outlined">
+                    remove
+                </span>
+            </button>
+        </div>
+        <div class="content">
+            <h1>test</h1>
+        </div>
+    </div>
+
+    
+
+
+    <div class="window" id="profil">
+        <div class="title-bar" onmousedown="startDragging(event, 'profil')">
+            <span class="title">Mon profil</span>
+            <button id="btn-resize" class="close-btn" onclick="closeWindow('profil')">X</button>
+            <button id="btn-resize" class="maximize-btn" onclick="maximizeWindow('profil')">+</button>
+            <button id="btn-resize" class="minimize-btn" onclick="minimizeWindow('profil')">-</button>
+        </div>
+        <div class="content">
+            <h1>test</h1>
+        </div>
+    </div>
+
+    <div class="window" id="experience">
+        <div class="title-bar" onmousedown="startDragging(event, 'experience')">
+            <span class="title">Mes expériences</span>
+            <button id="btn-resize" class="close-btn" onclick="closeWindow('experience')">X</button>
+            <button id="btn-resize" class="maximize-btn" onclick="maximizeWindow('experience')">+</button>
+            <button id="btn-resize" class="minimize-btn" onclick="minimizeWindow('experience')">-</button>
+        </div>
+        <div class="content">
+            <h1>test</h1>
+        </div>
+    </div>
+    <div class="window" id="contact">
+        <div class="title-bar" onmousedown="startDragging(event, 'contact')">
+            <span class="title">Contactez-moi</span>
+            <button id="btn-resize" class="close-btn" onclick="closeWindow('contact')">X</button>
+            <button id="btn-resize" class="maximize-btn" onclick="maximizeWindow('contact')">+</button>
+            <button id="btn-resize" class="minimize-btn" onclick="minimizeWindow('contact')">-</button>
+        </div>
+        <div class="content">
+            <h1>test</h1>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
